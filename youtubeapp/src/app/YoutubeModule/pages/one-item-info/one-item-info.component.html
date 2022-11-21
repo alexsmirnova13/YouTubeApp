@@ -1,0 +1,35 @@
+<div class="card" cardStyle [date]="oneItem['snippet'].publishedAt" *ngIf="oneItem">
+    <div class="img-info">
+        <img alt="photo" cardStyle [date]="oneItem['snippet'].publishedAt" 
+            *ngIf="oneItem['snippet'].thumbnails.high.url" [src]="oneItem['snippet'].thumbnails.high.url">
+        <img alt="photo" cardStyle [date]="oneItem['snippet'].publishedAt" 
+            *ngIf="!oneItem['snippet'].thumbnails.high.url" [src]="oneItem['snippet'].thumbnails.default.url">
+        <div>
+            
+            <div class="item__info">
+                <div class="card-info">
+                    <h1 >{{oneItem['snippet'].title}}</h1>
+                </div>
+                <div class="item__pin">
+                    <p>количество просмотров : {{oneItem['statistics'].viewCount}}</p>
+                </div>
+                <div class="item__pin">
+                    <p> количество лайков : {{oneItem['statistics'].likeCount}}</p>
+                </div>
+                <div class="item__pin">
+                    <p> название канала  : {{oneItem['snippet'].channelTitle}}</p>
+                </div>
+            </div> 
+        </div>
+    </div>
+    
+    <div>
+        <h2>Description:</h2>
+        <div class="description-block">
+            <p class="description">{{oneItem['snippet'].description}}</p>
+        </div>
+        
+    </div>
+    
+    <button (click)="onBackClick()">Назад</button>
+</div>

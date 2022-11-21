@@ -1,0 +1,16 @@
+<div class="item" cardStyle [date]="date">
+    <img class="item__img" [src]="frontImg" alt="картинка">
+    <h2 class="item__title">{{title}}</h2>
+    <div class="item__info">
+        <div class="item__pin">
+            <p>количество просмотров : {{viewCount}}</p>
+        </div>
+        <div class="item__pin">
+            <p> количество лайков : {{likeCount}}</p>
+        </div>
+        <div class="item__pin">
+            <p> название канала  : {{channelTitle}}</p>
+        </div>
+    </div> 
+    <button routerLink="{{id}}" >more...</button>
+</div>

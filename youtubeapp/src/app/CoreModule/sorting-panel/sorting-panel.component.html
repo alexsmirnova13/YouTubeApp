@@ -1,0 +1,11 @@
+<div *ngIf="isSort" class="sorting">
+    <div class="sorting-panel">
+        <p>Sorting by:</p>
+        <p (click)="onTypeSort($event)">date</p>
+        <p (click)="onTypeSort($event)">count of views</p>
+        <p>by word or sentance</p>
+        <input (keyup)="changeFilterStr()" [(ngModel)]="filterValue">
+    </div>
+</div>
+
+

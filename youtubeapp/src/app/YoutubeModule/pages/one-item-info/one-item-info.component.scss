@@ -1,0 +1,77 @@
+$ruler: 16px;
+$color-teal: teal;
+$color-bg: #EBECF0;
+$color-shadow: #BABECC;
+$color-white: #FFF;
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    padding: $ruler;
+    background-color:$color-bg;
+    text-shadow: 1px 1px 0 $color-white;
+    border-radius: 20px;
+    position: relative;
+}
+
+img {
+    border-radius: 20px;
+    height: 250px;
+    box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
+}
+
+.img-info{
+    display: flex;
+    flex-direction: row;
+}
+
+.item__info{
+    margin: 20px 10px 10px 20px;
+}
+
+button {
+    color:#61677C;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+
+    &:hover {
+        box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+    }
+
+    &:active {
+        box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+    }
+}
+
+button {
+    border: 0;
+    outline: 0;
+    font-size: $ruler;
+    border-radius: 20px;
+    padding: $ruler;
+    background-color:$color-bg;
+    text-shadow: 1px 1px 0 $color-white;
+    box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
+    margin-left: 40%;
+}
+
+.description{
+    white-space: pre-line;
+    
+}
+
+.description-block{
+    height: 200px;
+    overflow-y: scroll;
+}
+
+h1{
+    color: teal;
+}
+
+h2{
+    color: teal;
+}

@@ -1,0 +1,47 @@
+<form class="create-form" [formGroup]="createForm" (ngSubmit)="onLogin()">
+    <div class="card content">
+      <h1 class="segment">Create new card</h1>
+        <label>
+            <input type="text" id="inputTitle" formControlName="title" placeholder="Title">
+            <div *ngIf="submitted && formControl['title'].errors" >
+                <div *ngIf="formControl['title'].errors['required']" class="text-danger">Title is required</div>
+                <div *ngIf="formControl['title'].errors['minlength']" class="text-danger">The title is too short</div>
+                <div *ngIf="formControl['title'].errors['maxlength']" class="text-danger">The title is too long</div>
+            </div>
+        </label> 
+        <label>
+            <input type="text" id="inputDescription" formControlName="description" placeholder="Description">
+            <div *ngIf="submitted && formControl['description'].errors" >
+                <div *ngIf="formControl['description'].errors['maxlength']" class="text-danger">The description is too long</div>
+            </div>
+        </label> 
+        <label>
+            <input type="text" id="inputImg" formControlName="img" placeholder="Img">
+            <div *ngIf="submitted && formControl['img'].errors" >
+                <div *ngIf="formControl['img'].errors['pattern']" class="text-danger">Img must be URL.</div>
+                <div *ngIf="formControl['img'].errors['required']" class="text-danger">Img is required.</div>
+            </div>
+        </label> 
+        <label>
+            <input type="text" id="inputLink" formControlName="link" placeholder="Link video">
+            <div *ngIf="submitted && formControl['link'].errors" >
+                <div *ngIf="formControl['link'].errors['pattern']" class="text-danger">Link must be valid.</div>
+                <div *ngIf="formControl['link'].errors['required']" class="text-danger">Link is required.</div>
+            </div>
+        </label> 
+        <label>
+            date
+            <input type="date" id="start" name="trip-start"
+                value="2021-11-13"
+                min="2018-01-01" max="date" formControlName="date">
+            <div   div *ngIf="submitted && formControl['date'].errors" >
+                <div *ngIf="formControl['date'].errors['required']" class="text-danger">Date is required.</div>
+                <div *ngIf="formControl['date'].errors['futureDate']" class="text-danger">Not future date</div>
+            </div>
+        </label>
+        
+
+
+        <button class="teal" type="submit" (click)="onCreateCardClick()">Create Card</button>
+    </div>
+</form>

@@ -1,0 +1,13 @@
+<div class="items-list" >
+    <div *ngIf="isLoading$ | async ">Loading...</div>
+    <app-item  *ngFor="let card of allCardsStore$| async
+    | sortPipe:sortType:ascent 
+    | filter:filterStr" 
+              [title]="card['snippet'].title" 
+              [frontImg]="card['snippet'].thumbnails.default.url"
+              [viewCount]="card['statistics'].viewCount"
+              [likeCount]="card['statistics'].likeCount"
+              [channelTitle]="card['snippet'].channelTitle"
+              [date]="card['snippet'].publishedAt"
+              [id]="card['id']"></app-item>
+</div>

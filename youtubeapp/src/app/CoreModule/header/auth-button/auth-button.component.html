@@ -1,0 +1,11 @@
+<div *ngIf="isLogged" class="auth">
+    <p>You are logged in</p>
+    <img class="auth-img" alt="person" src="https://www.iconpacks.net/icons/1/free-user-icon-244-thumb.png">
+    <button (click)="exit()" class="btn-1">Exit</button>
+</div>
+<div *ngIf="!isLogged" class="auth">
+    <p>You are not logged in</p>
+    <img class="auth-img" alt="person" src="https://www.iconpacks.net/icons/1/free-user-icon-244-thumb.png">
+</div>
+
+
