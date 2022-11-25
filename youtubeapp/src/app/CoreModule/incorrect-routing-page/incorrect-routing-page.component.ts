@@ -1,15 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-incorrect-routing-page',
   templateUrl: './incorrect-routing-page.component.html',
-  styleUrls: ['./incorrect-routing-page.component.scss']
+  styleUrls: ['./incorrect-routing-page.component.scss'],
 })
-export class IncorrectRoutingPageComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class IncorrectRoutingPageComponent {}
